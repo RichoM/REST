@@ -17,6 +17,7 @@ process: request path: path
 	dir 
 		fileNamed: fileName 
 		do: [:file | request 
-			send200Response: file contents 
+			send200Response: (file contents
+				convertToWithConverter: UTF8TextConverter new) 
 			contentType: (self contentTypeFor: fileName)].
 	^ true
