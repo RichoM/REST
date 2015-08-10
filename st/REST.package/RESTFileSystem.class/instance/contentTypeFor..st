@@ -1,9 +1,11 @@
 requests
-contentTypeFor: fileName
+contentTypeFor: file
 	| extension |
-	extension := (fileName subStrings: '.') last.
+	extension := (file name subStrings: '.') last.
 	^ extension caseOf: {
 		['html'] -> ['text/html; charset=utf-8'].
 		['js'] -> ['text/javascript; charset=utf-8'].
 		['css'] -> ['text/css; charset=utf-8']
-	} otherwise: ['text/plain; charset=utf-8']
+	} otherwise: [file mimeTypes
+		ifNil: 'application/octet-stream'
+		ifNotNil: #first]

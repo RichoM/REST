@@ -16,8 +16,11 @@ process: request path: path
 	
 	dir 
 		fileNamed: fileName 
-		do: [:file | request 
-			send200Response: (file contents
-				convertToWithConverter: UTF8TextConverter new) 
-			contentType: (self contentTypeFor: fileName)].
+		do: [:file || fileSize contentType resp |
+			file binary.
+			fileSize := file size.
+			contentType := self contentTypeFor: file.
+			resp := request newResponse protocol: 'HTTP/1.1' code: 200.
+			resp headerAt: 'Content-Type' put: contentType.
+			request sendResponse: resp contentStream: file size: fileSize].
 	^ true
