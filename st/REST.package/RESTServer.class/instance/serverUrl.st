@@ -1,3 +1,3 @@
-initialize-release
-serverUrl
-	^ self subclassResponsibility 
+accessing
+serverUrl 
+	^ 'http://' , self serverHostname , ':', self serverPort asString 
