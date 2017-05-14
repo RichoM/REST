@@ -1,3 +1,3 @@
 accessing
 detail 
-	^ target value ifNotNil: #detail
+	^ target value ifNotNil: [:t | t detail]

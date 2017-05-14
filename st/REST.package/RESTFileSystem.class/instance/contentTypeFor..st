@@ -7,5 +7,5 @@ contentTypeFor: file
 		['js'] -> ['text/javascript; charset=utf-8'].
 		['css'] -> ['text/css; charset=utf-8']
 	} otherwise: [file mimeTypes
-		ifNil: 'application/octet-stream'
-		ifNotNil: #first]
+		ifNil: ['application/octet-stream']
+		ifNotNil: [:types | types first]]
