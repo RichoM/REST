@@ -1,3 +1,3 @@
-accessing
-serverPort
+abstract
+httpPort
 	^ self subclassResponsibility 

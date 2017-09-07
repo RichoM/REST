@@ -1,3 +1,4 @@
 initialize-release
 destroy
-	server destroy
+	http ifNotNil: [:s | s destroy].
+	https ifNotNil: [:s | s destroy]

@@ -1,3 +1,3 @@
-accessing
-serverHostname
+abstract
+httpsPort
 	^ self subclassResponsibility 

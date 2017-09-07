@@ -2,10 +2,12 @@
 	"class" : {
 		 },
 	"instance" : {
-		"destroy" : "Richo 7/17/2015 11:03",
+		"certName" : "Richo 9/6/2017 17:26",
+		"destroy" : "Richo 9/6/2017 17:30",
 		"dispatchRequest:" : "Richo 7/17/2015 11:04",
-		"initialize" : "Richo 7/17/2015 11:04",
-		"initializeServer" : "Richo 11/19/2015 15:34",
-		"serverHostname" : "Richo 11/19/2015 15:34",
-		"serverPort" : "Richo 11/19/2015 15:34",
-		"serverUrl" : "Richo 11/19/2015 15:34" } }
+		"hostname" : "Richo 9/6/2017 17:25",
+		"httpPort" : "Richo 9/6/2017 17:24",
+		"httpsPort" : "Richo 9/6/2017 17:24",
+		"initialize" : "Richo 9/6/2017 17:28",
+		"initializeHTTP" : "Richo 9/6/2017 17:25",
+		"initializeHTTPS" : "Richo 9/6/2017 17:30" } }

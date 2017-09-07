@@ -1,0 +1,3 @@
+abstract
+hostname
+	^ self subclassResponsibility 
