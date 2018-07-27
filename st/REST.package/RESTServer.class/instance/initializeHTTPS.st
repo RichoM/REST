@@ -3,9 +3,9 @@ initializeHTTPS
 	| port |
 	self certName ifNil: [^ self].
 	port := self httpsPort.
-	http := WebServer newForUrl: self hostname , ':', port.
-	http certName: self certName.
-	http errorHandler: [:err :req | err defaultAction].
-	http listenOn: port.
-	http addService: '/' action: [:request |
+	https := WebServer newForUrl: self hostname , ':', port.
+	https certName: self certName.
+	https errorHandler: [:err :req | err defaultAction].
+	https listenOn: port.
+	https addService: '/' action: [:request |
 		self dispatchRequest: request]
