@@ -1,3 +1,3 @@
 accessing
-summary
+summary: req
 	^ self link
